@@ -1,8 +1,9 @@
 import requests
 import re
 
-# ========== 分组匹配规则 ==========
+# ========== 分组匹配规则【顺序很重要，从上往下匹配，命中就停止】 ==========
 GROUP_RULES = [
+    ("抖音直播", r"douyin|抖音|pull‑hls|thirdgame"),
     ("央视", r"CCTV|央视|CGTN|央视频"),
     ("卫视频道", r"卫视"),
     ("地方台", r"省|市|本地|都市"),
@@ -28,7 +29,7 @@ FORCE_MAP = {
     "舞蹈直播2": "卫视频道"
 }
 
-# ========== 关键词黑名单：只要频道名包含下面字符串，直接过滤（解决带emoji广告） ==========
+# ========== 关键词黑名单：只要频道名包含下面字符串，直接过滤 ==========
 KEYWORD_BLACKLIST = {
     "jsnzkpg.com",
     "官网地址"
@@ -135,3 +136,4 @@ if __name__ == "__main__":
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_text)
     print(f"✅ 全部完成，共 {len(total_channels)} 个频道，输出 live.m3u")
+
