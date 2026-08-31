@@ -43,7 +43,8 @@ KEYWORD_BLACKLIST = {
     # "广告","测试"
 }
 
-# 源检测超时时间（单位秒）
+# ========== 开关：是否开启源连通检测（GitHub Action环境建议设置False） ==========
+ENABLE_CHECK = False
 CHECK_TIMEOUT = 2
 
 def is_url_valid(url):
@@ -102,8 +103,8 @@ def fetch_remote_m3u(url):
                         name = ""
                         continue
 
-                    # ========== 检测源是否有效 ==========
-                    if not is_url_valid(line):
+                    # ========== 检测源是否有效（开关控制） ==========
+                    if ENABLE_CHECK and not is_url_valid(line):
                         print(f"无效/超时源丢弃：{name} → {line}")
                         name = ""
                         continue
@@ -143,3 +144,4 @@ if __name__ == "__main__":
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_text)
     print(f"✅ 全部完成，共 {len(total_channels)} 个频道，输出 live.m3u")
+
