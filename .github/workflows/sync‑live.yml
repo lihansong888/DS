@@ -20,7 +20,7 @@ jobs:
         run: pip install requests
 
       - name: Sync remote source and generate live.m3u
-        run: python sync.py
+        run: python script/get_live.py
 
       - name: Commit & Push
         run: |
