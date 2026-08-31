@@ -40,6 +40,7 @@ URL_BLACKLIST = {
 # ========== 开关：是否开启源连通检测（GitHub Action环境建议False） ==========
 ENABLE_CHECK = False
 CHECK_TIMEOUT = 2
+
 def is_url_valid(url):
     """检测链接是否可访问，超时/报错返回False"""
     try:
@@ -50,13 +51,16 @@ def is_url_valid(url):
         return resp.status_code < 400
     except Exception:
         return False
+
 def match_group(channel_name):
     if channel_name in FORCE_MAP:
         return FORCE_MAP[channel_name]
     for g_name, pat in GROUP_RULES:
-        if re.search(pat, channel_name):
+        # 增加 re.IGNORECASE 忽略大小写匹配
+        if re.search(pat, channel_name, re.IGNORECASE):
             return g_name
     return "其他直播"
+
 def fetch_remote_m3u(url):
     """拉取单个远程m3u，返回频道列表"""
     try:
@@ -104,12 +108,14 @@ def fetch_remote_m3u(url):
     except Exception as e:
         print(f"【警告】拉取 {url} 失败: {e}")
         return []
+
 def build_m3u(all_channels):
     out = ["#EXTM3U"]
     for ch in all_channels:
         out.append(f'#EXTINF:-1 group-title="{ch["group"]}",{ch["name"]}')
         out.append(ch["url"])
     return "\n".join(out)
+
 if __name__ == "__main__":
     REMOTE_URLS = [
         "https://live.445569.xyz/live.m3u",
@@ -117,11 +123,18 @@ if __name__ == "__main__":
         "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
     ]
     total_channels = []
+    seen = set() # 去重集合，key = 频道名+url
+
     for url in REMOTE_URLS:
         print(f"正在拉取：{url}")
         chs = fetch_remote_m3u(url)
-        total_channels.extend(chs)
+        for ch in chs:
+            key = f"{ch['name']}|{ch['url']}"
+            if key not in seen:
+                seen.add(key)
+                total_channels.append(ch)
+
     m3u_text = build_m3u(total_channels)
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_text)
-    print(f"✅ 全部完成，共 {len(total_channels)} 个频道，输出 live.m3u")
+    print(f"✅ 全部完成，原始抓取{len(chs)}，去重后共 {len(total_channels)} 个频道，输出 live.m3u")
