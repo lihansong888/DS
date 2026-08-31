@@ -1,6 +1,5 @@
 import requests
 import re
-
 # ========== 分组匹配规则 ==========
 GROUP_RULES = [
     ("央视", r"CCTV|央视|CGTN|央视频"),
@@ -21,11 +20,15 @@ GROUP_RULES = [
     ("怀旧轮播", r"怀旧|老电视|老节目"),
     ("其他直播", r".*")
 ]
-
 # 强制例外映射，优先级最高
 FORCE_MAP = {
     "舞蹈直播1": "卫视频道",
     "舞蹈直播2": "卫视频道"
+}
+
+# ========== 黑名单：频道名完全匹配就直接丢弃 ==========
+BLACKLIST = {
+    "官网地址:jsnzkpg.com"
 }
 
 def match_group(channel_name):
@@ -52,6 +55,11 @@ def fetch_remote_m3u(url):
                     name = parts[1].strip()
             elif line and not line.startswith("#"):
                 if name:
+                    # 黑名单过滤
+                    if name in BLACKLIST:
+                        print(f"已屏蔽频道：{name}")
+                        name = ""
+                        continue
                     g = match_group(name)
                     channels.append({
                         "name": name,
@@ -78,15 +86,12 @@ if __name__ == "__main__":
         "https://gh-proxy.com/https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
         "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
     ]
-
     total_channels = []
     for url in REMOTE_URLS:
         print(f"正在拉取：{url}")
         chs = fetch_remote_m3u(url)
         total_channels.extend(chs)
-
     m3u_text = build_m3u(total_channels)
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_text)
     print(f"✅ 全部完成，共合并 {len(total_channels)} 个频道，输出 live.m3u")
-        
