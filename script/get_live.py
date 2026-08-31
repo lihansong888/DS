@@ -1,12 +1,13 @@
 import requests
 import re
+
 # ========== 分组匹配规则【顺序很重要，从上往下匹配，命中就停止】 ==========
 GROUP_RULES = [
     ("快手直播", r"快手|kuaishou"),
     ("虎牙直播", r"虎牙|huya"),
     ("YY直播", r"YY|yy直播"),
     ("抖音直播", r"douyin|抖音|pull‑hls|thirdgame"),
-    ("央视", r"CCTV|央视|CGTN|央视频|咪咕|cctv"),
+    ("央视", r"CCTV|央视|CGTN|央视频|咪咕"),
     ("卫视频道", r"卫视"),
     ("地方台", r"省|市|本地|都市"),
     ("港澳台", r"香港|台湾|澳门|中视|大亚|港台"),
@@ -24,19 +25,16 @@ GROUP_RULES = [
     ("怀旧轮播", r"怀旧|老电视|老节目"),
     ("其他直播", r".*")
 ]
+
 # 强制例外映射，优先级最高
 FORCE_MAP = {
     "舞蹈直播1": "卫视频道",
     "舞蹈直播2": "卫视频道"
 }
-# ========== 关键词黑名单：只要频道名包含下面字符串，直接过滤 ==========
-KEYWORD_BLACKLIST = {
-    "jsnzkpg.com",
-    "官网地址"
-}
-# ========== URL黑名单 ==========
-URL_BLACKLIST = {
-}
+
+# ========== 仅需要屏蔽的那一条特定频道名称 ==========
+BLOCK_CHANNEL_NAME = "☁️官网地址jsnzkpg.com"
+
 # ========== 开关：是否开启源连通检测（GitHub Action环境建议False） ==========
 ENABLE_CHECK = False
 CHECK_TIMEOUT = 2
@@ -56,7 +54,7 @@ def match_group(channel_name):
     if channel_name in FORCE_MAP:
         return FORCE_MAP[channel_name]
     for g_name, pat in GROUP_RULES:
-        # 增加 re.IGNORECASE 忽略大小写匹配
+        # 忽略大小写匹配
         if re.search(pat, channel_name, re.IGNORECASE):
             return g_name
     return "其他直播"
@@ -75,28 +73,22 @@ def fetch_remote_m3u(url):
                 parts = line.split(",", 1)
                 if len(parts) >= 2:
                     name = parts[1].strip()
+                else:
+                    name = "未知频道"
             elif line and not line.startswith("#"):
                 if name:
-                    # 关键词黑名单：包含就跳过，兼容emoji、特殊符号前缀
-                    skip = False
-                    for kw in KEYWORD_BLACKLIST:
-                        if kw in name:
-                            print(f"【屏蔽广告】{name}")
-                            skip = True
-                            break
-                    if skip:
+                    # 只过滤指定的那一个频道，其他全部放行
+                    if name == BLOCK_CHANNEL_NAME:
+                        print(f"【已过滤指定广告频道】{name}")
                         name = ""
                         continue
-                    # URL黑名单
-                    if line in URL_BLACKLIST:
-                        print(f"已屏蔽URL：{line}")
-                        name = ""
-                        continue
-                    # ========== 检测源是否有效（开关控制） ==========
+
+                    # 连通检测开关
                     if ENABLE_CHECK and not is_url_valid(line):
                         print(f"无效/超时源丢弃：{name} → {line}")
                         name = ""
                         continue
+
                     g = match_group(name)
                     channels.append({
                         "name": name,
@@ -123,18 +115,13 @@ if __name__ == "__main__":
         "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
     ]
     total_channels = []
-    seen = set() # 去重集合，key = 频道名+url
 
     for url in REMOTE_URLS:
         print(f"正在拉取：{url}")
         chs = fetch_remote_m3u(url)
-        for ch in chs:
-            key = f"{ch['name']}|{ch['url']}"
-            if key not in seen:
-                seen.add(key)
-                total_channels.append(ch)
+        total_channels.extend(chs) # 不做去重，直接追加全部
 
     m3u_text = build_m3u(total_channels)
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_text)
-    print(f"✅ 全部完成，原始抓取{len(chs)}，去重后共 {len(total_channels)} 个频道，输出 live.m3u")
+    print(f"✅ 全部完成，共 {len(total_channels)} 个频道，输出 live.m3u")
