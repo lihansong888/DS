@@ -28,22 +28,17 @@ FORCE_MAP = {
     "舞蹈直播2": "卫视频道"
 }
 
-# ========== 精确名称黑名单：屏蔽这个广告频道 ==========
-BLACKLIST = {
-    "官网地址jsnzkpg.com"
+# ========== 关键词黑名单：只要频道名包含下面字符串，直接过滤（解决带emoji广告） ==========
+KEYWORD_BLACKLIST = {
+    "jsnzkpg.com",
+    "官网地址"
 }
 
 # ========== URL黑名单 ==========
 URL_BLACKLIST = {
-    # "https://xxx/xxx.m3u8"
 }
 
-# ========== 关键词模糊黑名单 ==========
-KEYWORD_BLACKLIST = {
-    # "广告","测试"
-}
-
-# ========== 开关：是否开启源连通检测（GitHub Action环境建议设置False） ==========
+# ========== 开关：是否开启源连通检测（GitHub Action环境建议False） ==========
 ENABLE_CHECK = False
 CHECK_TIMEOUT = 2
 
@@ -82,24 +77,20 @@ def fetch_remote_m3u(url):
                     name = parts[1].strip()
             elif line and not line.startswith("#"):
                 if name:
-                    # 1.精确名称黑名单
-                    if name in BLACKLIST:
-                        print(f"已屏蔽频道：{name}")
-                        name = ""
-                        continue
-                    # 2.URL黑名单
-                    if line in URL_BLACKLIST:
-                        print(f"已屏蔽URL：{line}")
-                        name = ""
-                        continue
-                    # 3.关键词模糊过滤
-                    skip_flag = False
+                    # 关键词黑名单：包含就跳过，兼容emoji、特殊符号前缀
+                    skip = False
                     for kw in KEYWORD_BLACKLIST:
                         if kw in name:
-                            print(f"关键词屏蔽：{name}")
-                            skip_flag = True
+                            print(f"【屏蔽广告】{name}")
+                            skip = True
                             break
-                    if skip_flag:
+                    if skip:
+                        name = ""
+                        continue
+
+                    # URL黑名单
+                    if line in URL_BLACKLIST:
+                        print(f"已屏蔽URL：{line}")
                         name = ""
                         continue
 
@@ -144,4 +135,3 @@ if __name__ == "__main__":
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_text)
     print(f"✅ 全部完成，共 {len(total_channels)} 个频道，输出 live.m3u")
-
