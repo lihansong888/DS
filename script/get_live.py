@@ -123,7 +123,7 @@ def build_m3u(all_channels):
 if __name__ == "__main__":
     REMOTE_URLS = [
         "https://live.445569.xyz/live.m3u",
-        "https://gh-proxy.com/https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
+        "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
         "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
     ]
     total_channels = []
