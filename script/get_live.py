@@ -25,7 +25,7 @@ SATELLITE_KEYWORDS = [
     "贵州卫视","陕西卫视","甘肃卫视","宁夏卫视","新疆卫视"
 ]
 MUSIC_KEYWORDS = [
-    "音乐","风云音乐","经典音乐","MUSIC","music","KTV"
+    "音乐","风云音乐","经典音乐","MUSIC","music","电台","点歌台","点歌","KTV"
 ]
 
 def parse_any(text: str):
