@@ -27,6 +27,9 @@ SATELLITE_KEYWORDS = [
 MUSIC_KEYWORDS = [
     "音乐","风云音乐","经典音乐","MUSIC","music","电台","点歌台","点歌","KTV"
 ]
+FOURK_KEYWORDS = [
+    "4K","超高清","CCTV‑4K","CCTV4K"
+]
 
 def parse_any(text: str):
     res = []
@@ -80,7 +83,9 @@ def main():
                 # 判断音乐频道
                 elif any(k in ch_name for k in MUSIC_KEYWORDS):
                     group = "音乐频道"
-
+                # 判断4K频道
+                elif any(k in ch_name for k in FOURK_KEYWORDS):
+                    group = "4K频道"
                 if group is not None:
                     item_key = (extinf, play_url)
                     if item_key not in seen:
