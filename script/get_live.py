@@ -3,9 +3,9 @@ URL_LIST = [
         "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
         "https://raw.githubusercontent.com/bj123sd/hycg/refs/heads/main/tv.txt",
         "https://raw.githubusercontent.com/lihansong888/collect-tv-txt/refs/heads/main/bbxx_lite.txt",
-        "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u",
-        "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u",
-        "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u"
+        "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
+        
+        
 ]
 CCTV_KEYWORDS = [
     "CCTV-1", "CCTV-2", "CCTV-3", "CCTV-4", "CCTV-5",
