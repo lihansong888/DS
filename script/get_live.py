@@ -1,12 +1,12 @@
 import requests
 import re
 
-# 已经移除 fanmingming、iptv-org 两个失效源，你可以自行增删链接
+# ========== 只在这里填写你自己要用的直播源，其余全部删掉 ==========
 URL_LIST = [
     "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
     "https://raw.githubusercontent.com/bj123sd/hycg/refs/heads/main/tv.txt",
     "https://raw.githubusercontent.com/lihansong888/collect-tv-txt/refs/heads/main/bbxx_lite.txt",
-    "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u",
+    "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
 ]
 
 CCTV_KEYWORDS = [
@@ -61,7 +61,7 @@ def get_channel_name(extinf):
     return ""
 
 def add_group_tag(extinf: str, group_name:str):
-    # 清除源自带全部旧分组标签，只使用我们定义的4个分组
+    # 清除所有原有的 group-title
     extinf = re.sub(r' group-title="[^"]+"', '', extinf)
     idx = extinf.rfind(',')
     if idx == -1:
@@ -96,17 +96,18 @@ def main():
                         keep_list.append((new_ext, play_url))
         except Exception as e:
             print(f"⚠️ 拉取 {url} 失败：{e}")
-    print(f"✅筛选结束，去重后一共保留频道数量：{len(keep_list)}")
+
+    print(f"✅筛选结束，一共保留频道：{len(keep_list)}")
     output = ["#EXTM3U"]
     for ext, u in keep_list:
         output.append(ext)
         output.append(u)
     final_text = "\n".join(output)
-    print("-----【输出预览前20行】-----")
-    print("\n".join(output[:20]))
+
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(final_text)
-    print("✅已写入仓库根目录 live.m3u")
+    print("✅已输出 live.m3u")
 
 if __name__ == "__main__":
     main()
+
