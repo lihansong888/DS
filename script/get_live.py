@@ -1,6 +1,5 @@
 import requests
 import re
-
 # ========== 只在这里填写你自己要用的直播源，其余全部删掉 ==========
 URL_LIST = [
     "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
@@ -8,7 +7,6 @@ URL_LIST = [
     "https://raw.githubusercontent.com/lihansong888/collect-tv-txt/refs/heads/main/bbxx_lite.txt",
     "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
 ]
-
 CCTV_KEYWORDS = [
     "CCTV-1", "CCTV-2", "CCTV-3", "CCTV-4", "CCTV-5",
     "CCTV-5+", "CCTV-6", "CCTV-7", "CCTV-8", "CCTV-9",
@@ -26,8 +24,6 @@ SATELLITE_KEYWORDS = [
     "福建卫视","东南卫视","江西卫视","广西卫视","云南卫视",
     "贵州卫视","陕西卫视","甘肃卫视","宁夏卫视","新疆卫视"
 ]
-
-
 def parse_any(text: str):
     res = []
     extinf_line = None
@@ -49,12 +45,10 @@ def parse_any(text: str):
             fake_ext = f'#EXTINF:-1,{name_part}'
             res.append((fake_ext, url_part))
     return res
-
 def get_channel_name(extinf):
     if "," in extinf:
         return extinf.split(",")[-1].strip()
     return ""
-
 def add_group_tag(extinf: str, group_name:str):
     # 清除所有原有的 group-title
     extinf = re.sub(r' group-title="[^"]+"', '', extinf)
@@ -62,7 +56,6 @@ def add_group_tag(extinf: str, group_name:str):
     if idx == -1:
         return extinf
     return extinf[:idx] + f' group-title="{group_name}"' + extinf[idx:]
-
 def main():
     keep_list = []
     seen = set()
@@ -79,7 +72,6 @@ def main():
                 elif any(k in ch_name for k in SATELLITE_KEYWORDS):
                     group = "卫视频道"
                 
-
                 if group is not None:
                     item_key = (extinf, play_url)
                     if item_key not in seen:
@@ -88,18 +80,14 @@ def main():
                         keep_list.append((new_ext, play_url))
         except Exception as e:
             print(f"⚠️ 拉取 {url} 失败：{e}")
-
     print(f"✅筛选结束，一共保留频道：{len(keep_list)}")
     output = ["#EXTM3U"]
     for ext, u in keep_list:
         output.append(ext)
         output.append(u)
     final_text = "\n".join(output)
-
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(final_text)
     print("✅已输出 live.m3u")
-
 if __name__ == "__main__":
     main()
-
