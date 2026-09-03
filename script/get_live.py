@@ -1,5 +1,4 @@
 import requests
-
 URL_LIST = [
         "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
         "https://raw.githubusercontent.com/bj123sd/hycg/refs/heads/main/tv.txt",
@@ -8,7 +7,6 @@ URL_LIST = [
         "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u",
         "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u"
 ]
-
 CCTV_KEYWORDS = [
     "CCTV-1", "CCTV-2", "CCTV-3", "CCTV-4", "CCTV-5",
     "CCTV-5+", "CCTV-6", "CCTV-7", "CCTV-8", "CCTV-9",
@@ -18,7 +16,6 @@ CCTV_KEYWORDS = [
     "CCTV6","CCTV7","CCTV8","CCTV9","CCTV10",
     "CCTV11","CCTV12","CCTV13","CCTV14","CCTV15","CCTV16","CCTV17"
 ]
-
 SATELLITE_KEYWORDS = [
     "江苏卫视","浙江卫视","湖南卫视","东方卫视","上海卫视",
     "北京卫视","广东卫视","深圳卫视","安徽卫视","山东卫视",
@@ -26,6 +23,9 @@ SATELLITE_KEYWORDS = [
     "河北卫视","山西卫视","辽宁卫视","吉林卫视","黑龙江卫视",
     "福建卫视","东南卫视","江西卫视","广西卫视","云南卫视",
     "贵州卫视","陕西卫视","甘肃卫视","宁夏卫视","新疆卫视"
+]
+MUSIC_KEYWORDS = [
+    "音乐","风云音乐","经典音乐","MUSIC","music","KTV"
 ]
 
 def parse_any(text: str):
@@ -49,12 +49,10 @@ def parse_any(text: str):
             fake_ext = f'#EXTINF:-1,{name_part}'
             res.append((fake_ext, url_part))
     return res
-
 def get_channel_name(extinf):
     if "," in extinf:
         return extinf.split(",")[-1].strip()
     return ""
-
 def add_group_tag(extinf: str, group_name:str):
     if 'group-title=' in extinf:
         return extinf
@@ -62,7 +60,6 @@ def add_group_tag(extinf: str, group_name:str):
     if idx == -1:
         return extinf
     return extinf[:idx] + f' group-title="{group_name}"' + extinf[idx:]
-
 def main():
     keep_list = []
     seen = set()
@@ -80,6 +77,10 @@ def main():
                 # 判断卫视
                 elif any(k in ch_name for k in SATELLITE_KEYWORDS):
                     group = "卫视频道"
+                # 判断音乐频道
+                elif any(k in ch_name for k in MUSIC_KEYWORDS):
+                    group = "音乐频道"
+
                 if group is not None:
                     item_key = (extinf, play_url)
                     if item_key not in seen:
@@ -88,7 +89,6 @@ def main():
                         keep_list.append((new_ext, play_url))
         except Exception as e:
             print(f"⚠️ 拉取 {url} 失败：{e}")
-
     print(f"✅筛选结束，去重后一共保留频道数量：{len(keep_list)}")
     output = ["#EXTM3U"]
     for ext, u in keep_list:
@@ -97,10 +97,8 @@ def main():
     final_text = "\n".join(output)
     print("-----【输出预览前20行】-----")
     print("\n".join(output[:20]))
-
     with open("live.m3u", "w", encoding="utf-8") as f:
         f.write(final_text)
     print("✅已写入仓库根目录 live.m3u")
-
 if __name__ == "__main__":
     main()
