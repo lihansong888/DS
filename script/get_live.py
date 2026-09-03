@@ -78,10 +78,7 @@ def main():
                     group = "央视频道"
                 elif any(k in ch_name for k in SATELLITE_KEYWORDS):
                     group = "卫视频道"
-                elif any(k in ch_name for k in MUSIC_KEYWORDS):
-                    group = "音乐频道"
-                elif any(k in ch_name for k in FOURK_KEYWORDS):
-                    group = "4K频道"
+                
 
                 if group is not None:
                     item_key = (extinf, play_url)
