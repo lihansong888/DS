@@ -9,8 +9,7 @@ URL_LIST = [
         "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u"
 ]
 
-# 同时兼容 CCTV‑1 和 CCTV1 两种写法
-WHITELIST_KEYWORDS = [
+CCTV_KEYWORDS = [
     "CCTV-1", "CCTV-2", "CCTV-3", "CCTV-4", "CCTV-5",
     "CCTV-5+", "CCTV-6", "CCTV-7", "CCTV-8", "CCTV-9",
     "CCTV-10", "CCTV-11", "CCTV-12", "CCTV-13", "CCTV-14",
@@ -20,15 +19,22 @@ WHITELIST_KEYWORDS = [
     "CCTV11","CCTV12","CCTV13","CCTV14","CCTV15","CCTV16","CCTV17"
 ]
 
+SATELLITE_KEYWORDS = [
+    "江苏卫视","浙江卫视","湖南卫视","东方卫视","上海卫视",
+    "北京卫视","广东卫视","深圳卫视","安徽卫视","山东卫视",
+    "天津卫视","重庆卫视","四川卫视","湖北卫视","河南卫视",
+    "河北卫视","山西卫视","辽宁卫视","吉林卫视","黑龙江卫视",
+    "福建卫视","东南卫视","江西卫视","广西卫视","云南卫视",
+    "贵州卫视","陕西卫视","甘肃卫视","宁夏卫视","新疆卫视"
+]
+
 def parse_any(text: str):
-    """同时解析标准m3u(#EXTINF) 和 简易txt(名称,url)格式"""
     res = []
     extinf_line = None
     for raw_line in text.splitlines():
         ln = raw_line.strip()
         if not ln:
             continue
-        # 处理标准M3U格式
         if ln.startswith("#EXTINF:"):
             extinf_line = ln
             continue
@@ -36,7 +42,6 @@ def parse_any(text: str):
             res.append((extinf_line, ln))
             extinf_line = None
             continue
-        # 处理 txt：频道名,地址
         if ',' in ln and not ln.startswith("#"):
             sp = ln.split(',',1)
             name_part = sp[0].strip()
@@ -50,6 +55,14 @@ def get_channel_name(extinf):
         return extinf.split(",")[-1].strip()
     return ""
 
+def add_group_tag(extinf: str, group_name:str):
+    if 'group-title=' in extinf:
+        return extinf
+    idx = extinf.rfind(',')
+    if idx == -1:
+        return extinf
+    return extinf[:idx] + f' group-title="{group_name}"' + extinf[idx:]
+
 def main():
     keep_list = []
     seen = set()
@@ -60,11 +73,19 @@ def main():
             channels = parse_any(resp.text)
             for extinf, play_url in channels:
                 ch_name = get_channel_name(extinf)
-                if any(key in ch_name for key in WHITELIST_KEYWORDS):
+                group = None
+                # 判断央视
+                if any(k in ch_name for k in CCTV_KEYWORDS):
+                    group = "央视频道"
+                # 判断卫视
+                elif any(k in ch_name for k in SATELLITE_KEYWORDS):
+                    group = "卫视频道"
+                if group is not None:
                     item_key = (extinf, play_url)
                     if item_key not in seen:
                         seen.add(item_key)
-                        keep_list.append((extinf, play_url))
+                        new_ext = add_group_tag(extinf, group)
+                        keep_list.append((new_ext, play_url))
         except Exception as e:
             print(f"⚠️ 拉取 {url} 失败：{e}")
 
