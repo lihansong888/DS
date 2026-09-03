@@ -3,29 +3,36 @@ on:
   schedule:
     - cron: '0 2,6,10,14,18 * * *'
   workflow_dispatch:
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # 关键：授予仓库写入权限，解决push静默失败
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Install requests
         run: pip install requests
+
       - name: Sync remote source and generate live.m3u
         run: python script/get_live.py
+
       - name: Commit & Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git add live.m3u
           if git diff --quiet --exit-code; then
             echo "🔍 live.m3u无变化，跳过提交推送"
             exit 0
           fi
           git commit -m "auto sync live source"
-          git push
-
+          git push origin main
