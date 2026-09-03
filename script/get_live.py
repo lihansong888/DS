@@ -24,6 +24,12 @@ SATELLITE_KEYWORDS = [
     "福建卫视","东南卫视","江西卫视","广西卫视","云南卫视",
     "贵州卫视","陕西卫视","甘肃卫视","宁夏卫视","新疆卫视"
 ]
+# =========【新增：影视直播关键词，可自行增删】==========
+MOVIE_KEYWORDS = [
+    "电影","影院","影视","热播电影","经典电影",
+    "动作电影","喜剧电影","院线","4K电影"
+]
+
 def parse_any(text: str):
     res = []
     extinf_line = None
@@ -71,7 +77,10 @@ def main():
                     group = "央视频道"
                 elif any(k in ch_name for k in SATELLITE_KEYWORDS):
                     group = "卫视频道"
-                
+                # =========【新增判断影视直播分类】==========
+                elif any(k in ch_name for k in MOVIE_KEYWORDS):
+                    group = "影视直播"
+
                 if group is not None:
                     item_key = (extinf, play_url)
                     if item_key not in seen:
