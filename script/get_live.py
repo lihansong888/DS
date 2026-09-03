@@ -124,6 +124,8 @@ if __name__ == "__main__":
     REMOTE_URLS = [
         "https://live.445569.xyz/live.m3u",
         "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
+        "https://raw.githubusercontent.com/bj123sd/hycg/refs/heads/main/tv.txt",
+        "https://raw.githubusercontent.com/lihansong888/collect-tv-txt/refs/heads/main/bbxx_lite.txt",
         "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
     ]
     total_channels = []
