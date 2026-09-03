@@ -1,142 +1,66 @@
 import requests
-import re
 
-# ========== 分组匹配规则【顺序很重要，从上往下匹配，命中就停止】 ==========
-GROUP_RULES = [
-    
-    ("央视频道", r"CCTV|央视|CGTN|央视频道|migu|cctv|咪咕"),
-    ("卫视频道", r"卫视"),
-    ("地方频道", r"省|市|本地|都市"),
-    ("港澳台频道", r"香港|台湾|澳门|中视|大亚|港台"),
-    ("电影直播", r"电影|影院|影视轮播|院线"),
-    ("剧集直播", r"剧集|电视剧|连续剧"),
-    ("综艺直播", r"综艺|娱乐|秀场"),
-    ("体育直播", r"体育|足球|篮球|球赛|赛事"),
-    ("卡通少儿", r"卡通|少儿|动画|儿童"),
-    ("戏曲直播", r"戏曲|京剧|越剧|豫剧|黄梅戏"),
-    ("音乐直播", r"音乐|DJ|老歌|热歌|MV"),
-    ("抖音直播", r"douyin|抖音|pull‑hls|thirdgame"),
-    ("舞蹈直播", r"舞蹈|跳舞"),
-    ("资讯新闻", r"新闻|资讯|时事"),
-    ("纪实科教", r"纪实|科教|纪录片|历史"),
-    ("生活财经", r"财经|生活|美食|健康"),
-    ("怀旧轮播", r"怀旧|老电视|老节目"),
-    ("其他直播", r".*")
-]
-
-# 强制例外映射，优先级最高
-FORCE_MAP = {
-    "舞蹈直播1": "卫视频道",
-    "舞蹈直播2": "卫视频道"
-}
-
-# ========== 关键词黑名单：只要频道名包含下面字符串，直接过滤 ==========
-KEYWORD_BLACKLIST = {
-    "jsnzkpg.com",
-    "官网地址"
-}
-
-# ========== URL黑名单 ==========
-URL_BLACKLIST = {
-}
-
-# ========== 开关：是否开启源连通检测（GitHub Action环境建议False） ==========
-ENABLE_CHECK = False
-CHECK_TIMEOUT = 2
-
-def is_url_valid(url):
-    """检测链接是否可访问，超时/报错返回False"""
-    try:
-        headers = {
-            "User‑Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-        }
-        resp = requests.head(url, headers=headers, timeout=CHECK_TIMEOUT, allow_redirects=True)
-        return resp.status_code < 400
-    except Exception:
-        return False
-
-def match_group(channel_name):
-    if channel_name in FORCE_MAP:
-        return FORCE_MAP[channel_name]
-    for g_name, pat in GROUP_RULES:
-        if re.search(pat, channel_name):
-            return g_name
-    return "其他直播"
-
-def fetch_remote_m3u(url):
-    """拉取单个远程m3u，返回频道列表"""
-    try:
-        resp = requests.get(url, timeout=15)
-        resp.raise_for_status()
-        lines = resp.text.splitlines()
-        channels = []
-        name = ""
-        for line in lines:
-            line = line.strip()
-            if line.startswith("#EXTINF"):
-                parts = line.split(",", 1)
-                if len(parts) >= 2:
-                    name = parts[1].strip()
-            elif line and not line.startswith("#"):
-                if name:
-                    # 关键词黑名单：包含就跳过，兼容emoji、特殊符号前缀
-                    skip = False
-                    for kw in KEYWORD_BLACKLIST:
-                        if kw in name:
-                            print(f"【屏蔽广告】{name}")
-                            skip = True
-                            break
-                    if skip:
-                        name = ""
-                        continue
-
-                    # URL黑名单
-                    if line in URL_BLACKLIST:
-                        print(f"已屏蔽URL：{line}")
-                        name = ""
-                        continue
-
-                    # ========== 检测源是否有效（开关控制） ==========
-                    if ENABLE_CHECK and not is_url_valid(line):
-                        print(f"无效/超时源丢弃：{name} → {line}")
-                        name = ""
-                        continue
-
-                    g = match_group(name)
-                    channels.append({
-                        "name": name,
-                        "url": line,
-                        "group": g
-                    })
-                    name = ""
-        return channels
-    except Exception as e:
-        print(f"【警告】拉取 {url} 失败: {e}")
-        return []
-
-def build_m3u(all_channels):
-    out = ["#EXTM3U"]
-    for ch in all_channels:
-        out.append(f'#EXTINF:-1 group-title="{ch["group"]}",{ch["name"]}')
-        out.append(ch["url"])
-    return "\n".join(out)
-
-if __name__ == "__main__":
-    REMOTE_URLS = [
+# 在这里添加你的所有源，一行一个，末尾加逗号
+URL_LIST = [
         "https://live.445569.xyz/live.m3u",
         "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
         "https://raw.githubusercontent.com/bj123sd/hycg/refs/heads/main/tv.txt",
         "https://raw.githubusercontent.com/lihansong888/collect-tv-txt/refs/heads/main/bbxx_lite.txt",
         "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
-    ]
-    total_channels = []
-    for url in REMOTE_URLS:
-        print(f"正在拉取：{url}")
-        chs = fetch_remote_m3u(url)
-        total_channels.extend(chs)
+]
 
-    m3u_text = build_m3u(total_channels)
+# CCTV白名单关键字，包含即保留
+WHITELIST_KEYWORDS = [
+    "CCTV-1", "CCTV-2", "CCTV-3", "CCTV-4", "CCTV-5",
+    "CCTV-5+", "CCTV-6", "CCTV-7", "CCTV-8", "CCTV-9",
+    "CCTV-10", "CCTV-11", "CCTV-12", "CCTV-13", "CCTV-14",
+    "CCTV-15", "CCTV-16", "CCTV-17"
+]
+
+def parse_m3u(text: str):
+    """解析m3u/txt直播源，返回 [(extinf行,播放地址)]"""
+    result = []
+    extinf_line = None
+    for line in text.splitlines():
+        ln = line.rstrip("\r\n")
+        if ln.startswith("#EXTINF:"):
+            extinf_line = ln
+        elif extinf_line is not None and ln.strip() and not ln.startswith("#"):
+            result.append((extinf_line, ln.strip()))
+            extinf_line = None
+    return result
+
+def get_channel_name(extinf):
+    if "," in extinf:
+        return extinf.split(",")[-1].strip()
+    return ""
+
+def main():
+    keep_list = []
+    for url in URL_LIST:
+        try:
+            resp = requests.get(url, timeout=15)
+            resp.raise_for_status()
+            channels = parse_m3u(resp.text)
+            for extinf, play_url in channels:
+                ch_name = get_channel_name(extinf)
+                # 包含匹配，只要名字带关键字就留下
+                if any(key in ch_name for key in WHITELIST_KEYWORDS):
+                    keep_list.append((extinf, play_url))
+        except Exception as e:
+            print(f"⚠️ 拉取 {url} 失败：{e}，跳过该源")
+
+    print(f"✅筛选结束，一共保留频道数量：{len(keep_list)}")
+
+    # 组装输出m3u文件
+    output = ["#EXTM3U"]
+    for ext, u in keep_list:
+        output.append(ext)
+        output.append(u)
+
     with open("live.m3u", "w", encoding="utf-8") as f:
-        f.write(m3u_text)
-    print(f"✅ 全部完成，共 {len(total_channels)} 个频道，输出 live.m3u")
+        f.write("\n".join(output))
+    print("✅已写入仓库根目录 live.m3u")
 
+if __name__ == "__main__":
+    main()
