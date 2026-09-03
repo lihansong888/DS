@@ -26,12 +26,7 @@ SATELLITE_KEYWORDS = [
     "福建卫视","东南卫视","江西卫视","广西卫视","云南卫视",
     "贵州卫视","陕西卫视","甘肃卫视","宁夏卫视","新疆卫视"
 ]
-MUSIC_KEYWORDS = [
-    "音乐","风云音乐","经典音乐","MUSIC","music","电台","点歌台","点歌","KTV"
-]
-FOURK_KEYWORDS = [
-    "4K","超高清","CCTV‑4K","CCTV4K"
-]
+
 
 def parse_any(text: str):
     res = []
