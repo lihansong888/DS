@@ -4929,8 +4929,6 @@ http://youngx.top:4022/rtp/233.18.204.220:5140$上海电信
 http://vp.maomizi.cc:9530/rtp/239.77.0.47:5146$广东电信
 #EXTINF:-1 group-title="卫视频道",新疆卫视
 http://yhms.aylzline.top:8899/rtp/225.1.2.43:10252$河南联通
-#EXTINF:-1 group-title="央视频道",李连杰
-https://live.ottiptv.cc/huya/11342390
 #EXTINF:-1 group-title="卫视频道",辽宁卫视
 http://by4.nty.tv189.cn/live/tm-dxlnws-4000k.m3u8
 #EXTINF:-1 group-title="卫视频道",山东卫视
@@ -5359,5 +5357,3 @@ http://file.lpsntv.com/nmip-media/channellive/channel110181/playlist.m3u8
 https://live.264788.xyz/channel/shaanxiweishi?streamid=9dc887dba8ecb4e4143baf4f2373800c&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
 #EXTINF:-1 tvg-name="黑龙江卫视" tvg-logo="https://live.fanmingming.cn/tv/黑龙江卫视.png" group-title="卫视频道",黑龙江卫视
 http://file.lpsntv.com/nmip-media/channellive/channel110181/playlist.m3u8
-#EXTINF:-1 tvg-name="李连杰电影" tvg-logo="https://live.fanmingming.cn/tv/李连杰电影.png" group-title="央视频道",李连杰电影
-https://live.metshop.top/huya/11342390
