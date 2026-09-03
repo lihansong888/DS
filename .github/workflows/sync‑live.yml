@@ -1,33 +1,38 @@
 name: Sync Live Source
+
 on:
-  schedule:
-    - cron: '0 2,6,10,14,18 * * *'
+  push:
+    branches: [ main ]
   workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * *'
+
 jobs:
   sync:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
+
       - name: Install requests
         run: pip install requests
-      - name: Sync remote source and generate live.m3u
+
+      - name: Run python script
         run: python script/get_live.py
-      - name: Commit & Push
+
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git add live.m3u
-          if git diff --quiet --exit-code; then
-            echo "🔍 live.m3u无变化，跳过提交推送"
-            exit 0
-          fi
-          git commit -m "auto sync live source"
+          git config --global safe.directory "$GITHUB_WORKSPACE"
+          git add -A
+          git status
+          git commit -m "auto update live.m3u" || echo ">>> nothing changed"
           git push origin main
