@@ -5421,6 +5421,8 @@ http://livehtrmt.chinamcache.com/live/htzb4.m3u8
 https://live.ottiptv.cc/huya/30611864
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1072/eb/60ed4566609f96f9c396f9bd8ef42b_180_135.jpg?1743508098" group-title="影视直播", 齐鲁影视
 https://live.ottiptv.cc/huya/29807061
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1095/3c/5a9bf9abe6923657653736e128a1e9_180_135.jpg?1775015809" group-title="原创一起看", 一起看我爱看剧
+https://live.ottiptv.cc/huya/30867383
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1027/54/fad0fed531e375964f82741090f447_180_135.jpg?1666363182" group-title="影视直播", 虎牙电影陪看
 https://live.ottiptv.cc/huya/23177366
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1088/0e/a9640679804e9d74c90fd6597fac1f_180_135.jpg?1758184998" group-title="影视直播", 鹿儿影视
@@ -5505,6 +5507,8 @@ https://live.ottiptv.cc/huya/20380270
 https://live.ottiptv.cc/huya/30292047
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1090/a6/4c2420c6b530ed792f5ffcc7970735_180_135.jpg?1558062636" group-title="影视直播", 电影狂人A
 https://live.ottiptv.cc/huya/18715610
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1044/56/9e3acb6cc424c75f06d30fade0ba1f_180_135.jpg?1719416113" group-title="原创一起看", 一起看看球
+https://live.ottiptv.cc/huya/29982695
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1016/41/5bb1814e6dff5d1064fabf0753fc2e_180_135.jpg?1625981028" group-title="影视直播", 涵哥评电影
 https://live.ottiptv.cc/huya/16865726
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1090/91/f41be4ea8cc69d38bbe8971a814e7d_180_135.jpg?1719997052" group-title="影视直播", 悬疑电影放映厅
@@ -5537,6 +5541,8 @@ https://live.ottiptv.cc/huya/20969136
 https://live.ottiptv.cc/huya/16020022
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1090/05/d11be0e78b3136bdac67b2e1fcc088_180_135.jpg?1554362929" group-title="影视直播", 次元新番院线君
 https://live.ottiptv.cc/huya/11352951
+#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="原创一起看", 一起看短剧
+https://live.ottiptv.cc/huya/11352887
 #EXTINF:-1 group-title="影视直播",中国电影
 http://bx.757888.xyz/api.php?id=zgdy
 #EXTINF:-1 group-title="影视直播",刀刀影院✔原
@@ -5957,6 +5963,8 @@ https://www.goodiptv.club/douyu/9661369
 p3p://167.114.175.6:55331/655f8ccc0007d2578e70f934113a2428
 #EXTINF:-1 group-title="影视直播",龙祥电影(粤)
 p3p://167.114.175.6:55331/63375cce0008451773313a26199f3191
+#EXTINF:-1 group-title="原创一起看",HBO原创
+p3p://167.114.175.6:55331/623a6e38000091d497395ce957b27132
 #EXTINF:-1 group-title="影视直播",CHC影迷电影
 p3p://167.114.175.6:55331/63ec4caf00020428e445513c2d902fdb
 #EXTINF:-1 group-title="影视直播",美亚电影(国)
