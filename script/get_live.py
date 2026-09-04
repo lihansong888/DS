@@ -49,8 +49,8 @@ MUSIC_KEYWORDS = [
 ]
 # =========新增原创关键词==========
 ORIGINAL_KEYWORDS = [
-    "原创",
-    "一起看"
+    "武林萌主唐小姐",
+    "渐渐不想长大"
     
 ]
 def parse_any(text: str):
