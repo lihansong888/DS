@@ -47,7 +47,11 @@ MUSIC_KEYWORDS = [
     "荒草音乐",
     "蚕豆电台"
 ]
-
+# =========新增：原创、一起看关键词==========
+ORIGINAL_KEYWORDS = [
+    "原创",
+    "一起看"
+]
 def parse_any(text: str):
     res = []
     extinf_line = None
@@ -97,10 +101,11 @@ def main():
                     group = "卫视频道"
                 elif any(k in ch_name for k in MOVIE_KEYWORDS):
                     group = "影视直播"
-                # =========新增音乐分类判断==========
                 elif any(k in ch_name for k in MUSIC_KEYWORDS):
                     group = "音乐频道"
-
+                # =========新增原创/一起看分类判断==========
+                elif any(k in ch_name for k in ORIGINAL_KEYWORDS):
+                    group = "原创一起看"
                 if group is not None:
                     item_key = (extinf, play_url)
                     if item_key not in seen:
