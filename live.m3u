@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 group-title="卫视频道",河南卫视
-http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=00ab7f26eae7f59fe3429267a16d0c80&wsTime=1788563082
+http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=26dd77d9e51dedbca9178d1db14574b6&wsTime=1788570195
 #EXTINF:-1 group-title="央视频道",CCTV-1
 http://221.7.175.154:8445/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 group-title="央视频道",CCTV-1
@@ -310,11 +310,11 @@ http://ali-xwl.cztv.com/live/channel01720Plxw.m3u8
 #EXTINF:-1 group-title="卫视频道",浙江卫视
 http://221.7.175.154:8445/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 group-title="央视频道",CCTV1综合
-http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv1hd/600/index.m3u8?msisdn=2026090500005953d0f6214a4b467bae7f1361824c4e74&mdspid=&spid=699004&netType=0&sid=2201057821&pid=2028597139&timestamp=20260905000059&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=171.8.79.254&SecurityKey=20260905000059&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=5a053432c46834927e4db9dde3ef12a1
+http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv1hd/600/index.m3u8?msisdn=20260905040059800d26fedae94c4b83083e42990f2659&mdspid=&spid=699004&netType=0&sid=2201057821&pid=2028597139&timestamp=20260905040059&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=171.8.79.254&SecurityKey=20260905040059&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=b62748ad073074c4d95d447c64867d19
 #EXTINF:-1 group-title="央视频道",CCTV2财经
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv2hd/600/index.m3u8?msisdn=2026090502010398349828eb054db9811c833ce992d6b8&mdspid=&spid=699004&netType=0&sid=5500346945&pid=2028597139&timestamp=20260905020103&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=631780532&ParentNodeID=-99&assertID=5500346945&client_ip=171.8.79.254&SecurityKey=20260905020103&promotionId=&mvid=5101064231&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=3b91b671a0c642dfd63f6ecdb6b1743f
 #EXTINF:-1 group-title="央视频道",CCTV3综艺
-http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/cctv3hd/1000/index.m3u8?msisdn=20260905000106cecb76a1734f4abfb2a49a7c285fd012&mdspid=&spid=699004&netType=0&sid=5500212864&pid=2028597139&timestamp=20260905000106&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878271&ParentNodeID=-99&assertID=5500212864&client_ip=171.8.79.254&SecurityKey=20260905000106&promotionId=&mvid=5100001683&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=c51f3a451ee64b4d064b2609bed0c699
+http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/cctv3hd/1000/index.m3u8?msisdn=202609050401067dd8d173ea8244c98f271faf2ca49dfb&mdspid=&spid=699004&netType=0&sid=5500212864&pid=2028597139&timestamp=20260905040106&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878271&ParentNodeID=-99&assertID=5500212864&client_ip=171.8.79.254&SecurityKey=20260905040106&promotionId=&mvid=5100001683&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=885adbf799340cf39c73f614419d83e4
 #EXTINF:-1 group-title="央视频道",CCTV4中文国际
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv4hd/600/index.m3u8?msisdn=202609050201100f9aa81cfdba4bc6a1da7b3a48687555&mdspid=&spid=699004&netType=0&sid=5500346947&pid=2028597139&timestamp=20260905020110&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=631780421&ParentNodeID=-99&assertID=5500346947&client_ip=171.8.79.254&SecurityKey=20260905020110&promotionId=&mvid=5101064235&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=804f8cf090ec7fdb90b90a06604672de
 #EXTINF:-1 group-title="央视频道",CCTV5体育
@@ -336,7 +336,7 @@ http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cctv11hd/50/20200103/index.m
 #EXTINF:-1 group-title="央视频道",CCTV12社会与法
 http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/20200324/cctv12hd/50/index.m3u8?msisdn=20260905020257df26da5881a1468ea70ec48bf46a3d8f&mdspid=&spid=699004&netType=0&sid=5501083627&pid=2028597139&timestamp=20260905020257&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=673168185&ParentNodeID=-99&assertID=5501083627&client_ip=171.8.79.254&SecurityKey=20260905020257&promotionId=&mvid=5102910389&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=993ce9f603a71bac43a44401eda46263
 #EXTINF:-1 group-title="央视频道",CCTV13新闻
-http://hlsztemgsplive.miguvideo.com:8080/envivo_x/2018/SD/cctv13/1000/index.m3u8?msisdn=202609050001240983d6ff014a4e2da7ff1dfeb52a2dbe&mdspid=&spid=699004&netType=0&sid=2202208864&pid=2028597139&timestamp=20260905000124&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807423&ParentNodeID=-99&assertID=2202208864&client_ip=171.8.79.254&SecurityKey=20260905000124&promotionId=&mvid=2202208864&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=0acd2d34ba9755bdfb220e0bee61e6ce
+http://hlsztemgsplive.miguvideo.com:8080/envivo_x/2018/SD/cctv13/1000/index.m3u8?msisdn=20260905040124e0e6bb6f360041c8826a382ea4bd425b&mdspid=&spid=699004&netType=0&sid=2202208864&pid=2028597139&timestamp=20260905040124&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807423&ParentNodeID=-99&assertID=2202208864&client_ip=171.8.79.254&SecurityKey=20260905040124&promotionId=&mvid=2202208864&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=f3edf52ab816b0d8594f40511640ee54
 #EXTINF:-1 group-title="央视频道",CCTV14少儿
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/cctv14hd/1000/index.m3u8?msisdn=20260905020257585a686873de4263aaafc2f505d5e3ae&mdspid=&spid=699004&netType=0&sid=5500212875&pid=2028597139&timestamp=20260905020257&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878440&ParentNodeID=-99&assertID=5500212875&client_ip=171.8.79.254&SecurityKey=20260905020257&promotionId=&mvid=5100001697&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=b2805a0bd833d8c6dbce9f850acf2c46
 #EXTINF:-1 group-title="央视频道",CCTV15音乐
@@ -354,7 +354,7 @@ http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/jiangsuhd/600/index.m3u8?msi
 #EXTINF:-1 group-title="卫视频道",广东卫视
 http://hlsztemgsplive.miguvideo.com:8080/ws_w/2018/gdws/gdws711/1000/index.m3u8?msisdn=20260905020301188f0261f9484db5a7af941317394ebb&mdspid=&spid=699054&netType=0&sid=2202428795&pid=2028597139&timestamp=20260905020301&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608831231&ParentNodeID=-99&assertID=2202428795&client_ip=171.8.79.254&SecurityKey=20260905020301&promotionId=&mvid=2202428795&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=ca4ae5617a583e2a7ae2b16ecaaae408
 #EXTINF:-1 group-title="卫视频道",北京卫视
-http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/bjws/50/20251127/index.m3u8?msisdn=202609050002561381e5f904764e7e8b85ca8c7eb26a46&mdspid=&spid=600697&netType=0&sid=5910022306&pid=2028597139&timestamp=20260905000256&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=630287636&ParentNodeID=-99&assertID=5910022306&client_ip=171.8.79.254&SecurityKey=20260905000256&promotionId=&mvid=5101042960&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=b2663a9d7d2f1247578bf16be391d37e
+http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/bjws/50/20251127/index.m3u8?msisdn=20260905040257623b9c320e804cdb80c7e37e27dec9c1&mdspid=&spid=600697&netType=0&sid=5910022306&pid=2028597139&timestamp=20260905040257&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=630287636&ParentNodeID=-99&assertID=5910022306&client_ip=171.8.79.254&SecurityKey=20260905040257&promotionId=&mvid=5101042960&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=a463ca805bca8cb84e279ea1cd3927c3
 #EXTINF:-1 group-title="卫视频道",辽宁卫视
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/liaoningwshd/1000/index.m3u8?msisdn=20260905020301a28c95ea61094113b3f7c7426ed1aa0a&mdspid=&spid=600572&netType=0&sid=5910022198&pid=2028597139&timestamp=20260905020301&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=630291707&ParentNodeID=-99&assertID=5910022198&client_ip=171.8.79.254&SecurityKey=20260905020301&promotionId=&mvid=5101043014&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=76629bb724766c1cf0e503b0fea4af6f
 #EXTINF:-1 group-title="卫视频道",河北卫视
@@ -369,10 +369,10 @@ http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/shan3xiws/50/20220809/index.
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/hubeiwshd/1000/index.m3u8?msisdn=2026090502012849ba5fd004464dd9affce7250e54afa2&mdspid=&spid=600633&netType=0&sid=5910022163&pid=2028597139&timestamp=20260905020128&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=947472496&ParentNodeID=-99&assertID=5910022163&client_ip=171.8.79.254&SecurityKey=20260905020128&promotionId=&mvid=5900004355&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=11c2481a210f97fb1470953332bd630e
 #EXTINF:-1 group-title="卫视频道",吉林卫视
 http://hlsztemgsplive.miguvideo.com:8080/envivo_v/2018/SD/jilin/1000/index.m3u8?msisdn=2026090502013232f3842b7f764740b05816348155d806&mdspid=&spid=600633&netType=0&sid=5910022164&pid=2028597139&timestamp=20260905020132&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=947472500&ParentNodeID=-99&assertID=5910022164&client_ip=171.8.79.254&SecurityKey=20260905020132&promotionId=&mvid=5900004357&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=d967876698c611a05d160ea219b46bb3
+#EXTINF:-1 group-title="卫视频道",东南卫视
+http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/dongnanws/50/20230724/index.m3u8?msisdn=20260905040257834fb1976c774c7f9e135279b41b1e58&mdspid=&spid=600717&netType=0&sid=5910022182&pid=2028597139&timestamp=20260905040257&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=849116810&ParentNodeID=-99&assertID=5910022182&client_ip=171.8.79.254&SecurityKey=20260905040257&promotionId=&mvid=5900006229&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=3c198ab631fdc9d551c3bd9694e37bb9
 #EXTINF:-1 group-title="卫视频道",宁夏卫视
 http://hlsztemgsplive.miguvideo.com:8080/envivo_x/2018/SD/ningxia/1000/index.m3u8?msisdn=20260905020303b865688357b94602bd4625d4ae72b589&mdspid=&spid=600697&netType=0&sid=5910022262&pid=2028597139&timestamp=20260905020303&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=738910535&ParentNodeID=-99&assertID=5910022262&client_ip=171.8.79.254&SecurityKey=20260905020303&promotionId=&mvid=5900004337&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=a290dbb526219bb52f2d69207b5e0982
-#EXTINF:-1 group-title="卫视频道",重庆卫视
-http://hlsztemgsplive.miguvideo.com:8080/envivo_x/2018/SD/chongqing/1000/index.m3u8?msisdn=20260905000257544c3784ea8b42d3a68166084d3b6480&mdspid=&spid=600697&netType=0&sid=5910022305&pid=2028597139&timestamp=20260905000257&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=738910914&ParentNodeID=-99&assertID=5910022305&client_ip=171.8.79.254&SecurityKey=20260905000257&promotionId=&mvid=5900004329&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=66e5d61725120de81dd9d3e78c1dbf8b
 #EXTINF:-1 group-title="卫视频道",黑龙江卫视
 http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/nxjj/50/20251225/index.m3u8?msisdn=2026090502030391172c6b3dcd4d92b644585e42f84ccb&mdspid=&spid=600697&netType=0&sid=5910022409&pid=2028597139&timestamp=20260905020303&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=738906901&ParentNodeID=-99&assertID=5910022409&client_ip=171.8.79.254&SecurityKey=20260905020303&promotionId=&mvid=5900004349&mcid=500020&playurlVersion=WX-A1-9.8.2-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=192b0660e0ca80b314a1720dff46e331
 #EXTINF:-1 group-title="影视直播",江苏影视频道
@@ -5421,158 +5421,144 @@ http://livehtrmt.chinamcache.com/live/htzb4.m3u8
 https://live.ottiptv.cc/huya/11336726
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1079/1d/b331722f8da17a89e13517862c7d92_180_135.jpg?1782381785" group-title="原创", 渐渐不想长大
 https://live.ottiptv.cc/huya/31307674
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1060/cb/c1d4c2aef096686b69ae043e9f7650_180_135.jpg?1782726699" group-title="原创", 温柔璐琳
-https://live.ottiptv.cc/huya/31311855
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1063/02/f9bbf51bfad5f4ce6ada768203149e_180_135.jpg?1782484967" group-title="原创", 凌婫婫
-https://live.ottiptv.cc/huya/31305388
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1076/b5/c088c7dc6b84aabd17a1e198bc0694_180_135.jpg?1596715717" group-title="原创", 千里
 https://live.ottiptv.cc/huya/20985776
-#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1081/9e/65115e9fb3108fcb101361c8ab9dd7_180_135.jpg" group-title="原创", 小木子先生丶
-https://live.ottiptv.cc/huya/11342396
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1084/37/7c96090110880e88916b11e4a18cf9_180_135.jpg?1526894329" group-title="原创", 周星星
 https://live.ottiptv.cc/huya/11342412
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1004/b6/a8b1c8dd004e9b08880893401bb777_180_135.jpg?1787499955" group-title="原创", 视觉、一颗菜
-https://live.ottiptv.cc/huya/25154601
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1072/78/7d3546bd562469290d47d80323c4bc_180_135.jpg?1673457505" group-title="原创", Up-絮絮
-https://live.ottiptv.cc/huya/126859
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1009/e8/246b9f7e3b231f7b5798d45a97aad9_180_135.jpg?1783710150" group-title="原创", 圆圆可爱妹
 https://live.ottiptv.cc/huya/31311956
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1041/a5/10ded51e3ad604d7c12bee7e4da8aa_180_135.jpg?1744288855" group-title="影视直播", 悠悠爱电影
 https://live.ottiptv.cc/huya/30611864
-#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1071/e7/d4f17fe8278aa00c302295e86756bf_180_135.jpg" group-title="原创", 小虎牙-QQFbPxwM1A
-https://live.ottiptv.cc/huya/11352958
+#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1081/9e/65115e9fb3108fcb101361c8ab9dd7_180_135.jpg" group-title="原创", 小木子先生丶
+https://live.ottiptv.cc/huya/11342396
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1066/f9/cc6dec79622158f5b1daa68c608973_180_135.jpg?1782071465" group-title="原创", 敏敏软香肉
 https://live.ottiptv.cc/huya/31292911
-#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1056/e7/c61ec3ae80bbc93817186f3a41d47c_180_135.jpg?1449028717" group-title="原创", 鯎爺
-https://live.ottiptv.cc/huya/11352944
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1086/21/92a02181a67325b877906b521cad72_180_135.jpg?1782381180" group-title="原创", 水井虎
-https://live.ottiptv.cc/huya/31308706
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1087/61/9a91b336a43215f580fed6d5428bbc_180_135.jpg?1768534328" group-title="原创", 雨落人间女神
-https://live.ottiptv.cc/huya/31091289
+#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1071/e7/d4f17fe8278aa00c302295e86756bf_180_135.jpg" group-title="原创", 小虎牙-QQFbPxwM1A
+https://live.ottiptv.cc/huya/11352958
 #EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="原创", 口口甜
 https://live.ottiptv.cc/huya/25701671
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1085/f6/2560167039d4cb741d3522ea81877d_180_135.jpg?1782378916" group-title="原创", 依一不吃香菜
-https://live.ottiptv.cc/huya/31307996
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1062/fd/124521e66a8aa66f7438a7ff6fd6eb_180_135.jpg?1780758723" group-title="原创", 玉妮啵啵
-https://live.ottiptv.cc/huya/31292904
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1050/42/28f36f4d0767fb6efc42c1c1940e1c_180_135.jpg?1561358214" group-title="原创", 阿斗归来了
-https://live.ottiptv.cc/huya/13303478
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1072/eb/60ed4566609f96f9c396f9bd8ef42b_180_135.jpg?1743508098" group-title="影视直播", 齐鲁影视
 https://live.ottiptv.cc/huya/29807061
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1038/41/6bb0a55ac222adee2d0e80009f79be_180_135.jpg?1737176671" group-title="原创", 沫宝儿吖
-https://live.ottiptv.cc/huya/30526426
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1050/42/28f36f4d0767fb6efc42c1c1940e1c_180_135.jpg?1561358214" group-title="原创", 阿斗归来了
+https://live.ottiptv.cc/huya/13303478
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1027/54/fad0fed531e375964f82741090f447_180_135.jpg?1666363182" group-title="影视直播", 虎牙电影陪看
 https://live.ottiptv.cc/huya/23177366
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1085/f6/2560167039d4cb741d3522ea81877d_180_135.jpg?1782378916" group-title="原创", 依一不吃香菜
+https://live.ottiptv.cc/huya/31307996
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1038/41/6bb0a55ac222adee2d0e80009f79be_180_135.jpg?1737176671" group-title="原创", 沫宝儿吖
+https://live.ottiptv.cc/huya/30526426
+#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1056/e7/c61ec3ae80bbc93817186f3a41d47c_180_135.jpg?1449028717" group-title="原创", 鯎爺
+https://live.ottiptv.cc/huya/11352944
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1088/0e/a9640679804e9d74c90fd6597fac1f_180_135.jpg?1758184998" group-title="影视直播", 鹿儿影视
 https://live.ottiptv.cc/huya/30986994
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1072/51/dced48b09ee8ca6de89461920a1c65_180_135.jpg?1779374758" group-title="影视直播", 甜甜影院
-https://live.ottiptv.cc/huya/31093836
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1087/61/9a91b336a43215f580fed6d5428bbc_180_135.jpg?1768534328" group-title="原创", 雨落人间女神
+https://live.ottiptv.cc/huya/31091289
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1081/ee/d3d092df599c532b65b75c15e61fe4_180_135.jpg?1760683931" group-title="影视直播", 娇娇影视
 https://live.ottiptv.cc/huya/31027196
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1000/9c/a18289e22eb3b750ed100475be1758_180_135.jpg?1743415979" group-title="影视直播", 奥斯曼影院
-https://live.ottiptv.cc/huya/30509122
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1060/cb/c1d4c2aef096686b69ae043e9f7650_180_135.jpg?1782726699" group-title="原创", 温柔璐琳
+https://live.ottiptv.cc/huya/31311855
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1063/02/f9bbf51bfad5f4ce6ada768203149e_180_135.jpg?1782484967" group-title="原创", 凌婫婫
+https://live.ottiptv.cc/huya/31305388
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1086/21/92a02181a67325b877906b521cad72_180_135.jpg?1782381180" group-title="原创", 水井虎
+https://live.ottiptv.cc/huya/31308706
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1062/fd/124521e66a8aa66f7438a7ff6fd6eb_180_135.jpg?1780758723" group-title="原创", 玉妮啵啵
+https://live.ottiptv.cc/huya/31292904
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1012/5e/78f08eff3c9c51fbdf695431b9b1d4_180_135.jpg?1569319588" group-title="影视直播", 止戈电影
 https://live.ottiptv.cc/huya/19863777
-#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1067/a7/a4ef768d73ace55fbc7adce0f4e329_180_135.jpg?1517472689" group-title="影视直播", 电影最TOP
-https://live.ottiptv.cc/huya/11774959
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1054/dc/220aa819b2f3237d62bb66a75a0a43_180_135.jpg?1531813967" group-title="影视直播", 扁豆看电影
 https://live.ottiptv.cc/huya/16028551
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1067/28/eb10b25db1f1a70fcb79da1403ab72_180_135.jpg?1556020041" group-title="影视直播", 亮哥讲电影
-https://live.ottiptv.cc/huya/16144175
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1007/f7/bc9b72fbdfbe155c8810ed60ac9344_180_135.jpg?1620733428" group-title="影视直播", S哥影视
-https://live.ottiptv.cc/huya/24720260
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1000/9c/a18289e22eb3b750ed100475be1758_180_135.jpg?1743415979" group-title="影视直播", 奥斯曼影院
+https://live.ottiptv.cc/huya/30509122
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1014/70/b0e16dd051b7185ab6d30caed488e4_180_135.jpg?1729480958" group-title="影视直播", 阿光影视
 https://live.ottiptv.cc/huya/30292086
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1075/33/b6467219cbdbda1306edb9ebf29d2c_180_135.jpg?1543546825" group-title="影视直播", 虎牙影院
-https://live.ottiptv.cc/huya/11601968
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1007/f7/bc9b72fbdfbe155c8810ed60ac9344_180_135.jpg?1620733428" group-title="影视直播", S哥影视
+https://live.ottiptv.cc/huya/24720260
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1067/28/eb10b25db1f1a70fcb79da1403ab72_180_135.jpg?1556020041" group-title="影视直播", 亮哥讲电影
+https://live.ottiptv.cc/huya/16144175
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1011/3a/94ed3402adcd9dfb2074578756c65b_180_135.jpg?1607659085" group-title="影视直播", 小丑讲电影
 https://live.ottiptv.cc/huya/16857432
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1065/f9/7df656f34e52818369ae297bd17713_180_135.jpg?1659689962" group-title="影视直播", 辟哥影视
-https://live.ottiptv.cc/huya/27653235
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1014/29/0c2eaf5f001aea61d85644c44fa84c_180_135.jpg?1741615191" group-title="影视直播", 大神影视
-https://live.ottiptv.cc/huya/30297011
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1063/d0/50ebf358fb4b19b7507b652f85f905_180_135.jpg?1621071408" group-title="影视直播", 吾聊电影
-https://live.ottiptv.cc/huya/16424416
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1086/ce/3553ebf20627169b7fcba3414f4460_180_135.jpg?1694848155" group-title="影视直播", 蒲公英电影
 https://live.ottiptv.cc/huya/28806637
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1075/33/b6467219cbdbda1306edb9ebf29d2c_180_135.jpg?1543546825" group-title="影视直播", 虎牙影院
+https://live.ottiptv.cc/huya/11601968
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1065/f9/7df656f34e52818369ae297bd17713_180_135.jpg?1659689962" group-title="影视直播", 辟哥影视
+https://live.ottiptv.cc/huya/27653235
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1027/0c/26e53f84e284e22cf9082c4c28131b_180_135.jpg?1598951846" group-title="影视直播", 越哥说电影
 https://live.ottiptv.cc/huya/15894162
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1067/9c/0e74be1209e616b763007026fb84d3_180_135.jpg?1712904882" group-title="影视直播", 奇幻电影放映厅
-https://live.ottiptv.cc/huya/26355847
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1086/66/92eea73419e298b87afa54a59b6dc0_180_135.jpg?1614062840" group-title="影视直播", 战争电影放映厅
-https://live.ottiptv.cc/huya/21059618
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1077/29/fd4f9175d62f8d4b18dadb334dba25_180_135.jpg?1787264203" group-title="影视直播", 浅浅爱电影
 https://live.ottiptv.cc/huya/31274232
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1014/29/0c2eaf5f001aea61d85644c44fa84c_180_135.jpg?1741615191" group-title="影视直播", 大神影视
+https://live.ottiptv.cc/huya/30297011
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1086/66/92eea73419e298b87afa54a59b6dc0_180_135.jpg?1614062840" group-title="影视直播", 战争电影放映厅
+https://live.ottiptv.cc/huya/21059618
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1065/e5/cc68debd11090522603f438e04d4ce_180_135.jpg?1697438550" group-title="影视直播", 楚门聊电影
+https://live.ottiptv.cc/huya/16507906
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1067/9c/0e74be1209e616b763007026fb84d3_180_135.jpg?1712904882" group-title="影视直播", 奇幻电影放映厅
+https://live.ottiptv.cc/huya/26355847
 #EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1024/bb/b1a3c97c76cb4dc160dd5f2483d747_180_135.jpg" group-title="影视直播", 喜剧电影放映厅
 https://live.ottiptv.cc/huya/11602031
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1040/a1/76c68c28ee20224874db89671c96b3_180_135.jpg?1728380114" group-title="影视直播", 电影探长官方
 https://live.ottiptv.cc/huya/30277705
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1063/d0/50ebf358fb4b19b7507b652f85f905_180_135.jpg?1621071408" group-title="影视直播", 吾聊电影
+https://live.ottiptv.cc/huya/16424416
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1016/41/5bb1814e6dff5d1064fabf0753fc2e_180_135.jpg?1625981028" group-title="影视直播", 涵哥评电影
+https://live.ottiptv.cc/huya/16865726
 #EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 武侠电影放映厅
 https://live.ottiptv.cc/huya/29982611
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1097/73/56ed99751b3bbf51f4baf82b4e21ec_180_135.jpg?1611543976" group-title="影视直播", 亮哥讲电影2
-https://live.ottiptv.cc/huya/21059622
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1019/6d/229a7a8a4471215362b6099ce96115_180_135.jpg?1733915514" group-title="影视直播", 大潘影视
 https://live.ottiptv.cc/huya/30439834
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1089/23/a0eb94473d253150164bc0b03ba434_180_135.jpg?1612426638" group-title="影视直播", 冒险电影放映厅
-https://live.ottiptv.cc/huya/21059566
+#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 吾聊电影2
+https://live.ottiptv.cc/huya/29982684
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1024/62/fd3144c3f8fc6a2d243c8d48b8fb7c_180_135.jpg?1691512473" group-title="影视直播", 小若影视
 https://live.ottiptv.cc/huya/29868594
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1049/fe/16729c8ce149ec3f4a60d8e5a1fac9_180_135.jpg?1618468403" group-title="原创", 周星星梦里的朱茵
 https://live.ottiptv.cc/huya/21059587
 #EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1096/d6/c177089e08964689b8e5cece7e08f8_180_135.jpg" group-title="影视直播", 动画电影放映厅
 https://live.ottiptv.cc/huya/11352878
-#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 吾聊电影2
-https://live.ottiptv.cc/huya/29982684
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1008/7a/edec810dfc733559981faa88ca7eab_180_135.jpg?1713512754" group-title="影视直播", 粤语电影放映厅
-https://live.ottiptv.cc/huya/21059572
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1019/74/3e2eff112963c8f898e585168ba99b_180_135.jpg?1719996939" group-title="影视直播", 爱情电影放映厅
-https://live.ottiptv.cc/huya/29982639
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1021/19/bc55d6fd83f0dbfae3939e937080f2_180_135.jpg?1538072257" group-title="影视直播", 鱼丸说电影
-https://live.ottiptv.cc/huya/16615910
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1054/39/83a56a82c04461f15d918dc055d0b4_180_135.jpg?1620961449" group-title="影视直播", 酱婶儿电影
-https://live.ottiptv.cc/huya/24396474
+#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 越哥说电影2
+https://live.ottiptv.cc/huya/29982680
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1097/73/56ed99751b3bbf51f4baf82b4e21ec_180_135.jpg?1611543976" group-title="影视直播", 亮哥讲电影2
+https://live.ottiptv.cc/huya/21059622
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1089/23/a0eb94473d253150164bc0b03ba434_180_135.jpg?1612426638" group-title="影视直播", 冒险电影放映厅
+https://live.ottiptv.cc/huya/21059566
+#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="原创", 阿斗归来了3
+https://live.ottiptv.cc/huya/29982685
 #EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 电影最TOP2
 https://live.ottiptv.cc/huya/29982676
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1070/7e/366ae2ea9db3c98ac57ec28781983f_180_135.jpg?1530171252" group-title="影视直播", 小川侃电影
-https://live.ottiptv.cc/huya/15870999
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1065/e5/cc68debd11090522603f438e04d4ce_180_135.jpg?1697438550" group-title="影视直播", 楚门聊电影
-https://live.ottiptv.cc/huya/16507906
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1067/c1/a64efaeeb398f1dceb115a76b7c31d_180_135.jpg?1699255661" group-title="影视直播", 大墨电影
-https://live.ottiptv.cc/huya/29458834
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1034/fb/492ee09d84c4fe858a6005307f37ce_180_135.jpg?1531496285" group-title="影视直播", 熊妹撩电影
-https://live.ottiptv.cc/huya/15966357
-#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 驴子爱影视
-https://live.ottiptv.cc/huya/20380270
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1021/19/bc55d6fd83f0dbfae3939e937080f2_180_135.jpg?1538072257" group-title="影视直播", 鱼丸说电影
+https://live.ottiptv.cc/huya/16615910
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1024/c1/52e00a9af86d06d2a2a467f551ab6d_180_135.jpg?1649439695" group-title="影视直播", 大聪明和魏乐乐影院
+https://live.ottiptv.cc/huya/23304691
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1090/91/f41be4ea8cc69d38bbe8971a814e7d_180_135.jpg?1719997052" group-title="影视直播", 悬疑电影放映厅
+https://live.ottiptv.cc/huya/29982641
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1064/a8/776881ba041d1db68ccbc8f2110b8e_180_135.jpg?1728873695" group-title="影视直播", 阿涛影视
 https://live.ottiptv.cc/huya/30292047
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1090/a6/4c2420c6b530ed792f5ffcc7970735_180_135.jpg?1558062636" group-title="影视直播", 电影狂人A
 https://live.ottiptv.cc/huya/18715610
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1016/41/5bb1814e6dff5d1064fabf0753fc2e_180_135.jpg?1625981028" group-title="影视直播", 涵哥评电影
-https://live.ottiptv.cc/huya/16865726
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1090/91/f41be4ea8cc69d38bbe8971a814e7d_180_135.jpg?1719997052" group-title="影视直播", 悬疑电影放映厅
-https://live.ottiptv.cc/huya/29982641
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1028/7d/aa38c9785233dab051a928deb0064b_180_135.jpg?1733909177" group-title="影视直播", 鑫鑫影视
-https://live.ottiptv.cc/huya/30439676
-#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="原创", 阿斗归来了3
-https://live.ottiptv.cc/huya/29982685
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1070/7e/366ae2ea9db3c98ac57ec28781983f_180_135.jpg?1530171252" group-title="影视直播", 小川侃电影
+https://live.ottiptv.cc/huya/15870999
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1067/c1/a64efaeeb398f1dceb115a76b7c31d_180_135.jpg?1699255661" group-title="影视直播", 大墨电影
+https://live.ottiptv.cc/huya/29458834
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1008/7a/edec810dfc733559981faa88ca7eab_180_135.jpg?1713512754" group-title="影视直播", 粤语电影放映厅
+https://live.ottiptv.cc/huya/21059572
+#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 驴子爱影视
+https://live.ottiptv.cc/huya/20380270
 #EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 亮哥讲电影2
 https://live.ottiptv.cc/huya/29982687
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1096/33/51158c5200086284ffda055be1197d_180_135.jpg?1611543884" group-title="影视直播", 扁豆看电影2
-https://live.ottiptv.cc/huya/21059623
-#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 越哥说电影2
-https://live.ottiptv.cc/huya/29982680
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1038/ed/2054a935c77f4f402d5b0a1afa2522_180_135.jpg?1646813273" group-title="影视直播", 惊悚电影放映厅
 https://live.ottiptv.cc/huya/26355795
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1096/33/51158c5200086284ffda055be1197d_180_135.jpg?1611543884" group-title="影视直播", 扁豆看电影2
+https://live.ottiptv.cc/huya/21059623
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1010/c4/84b1a5aac4db14fe509cd306d5d53b_180_135.jpg?1612406334" group-title="影视直播", 港剧影视汇
 https://live.ottiptv.cc/huya/23903142
 #EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 爆裂电影2
 https://live.ottiptv.cc/huya/29982678
-#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 短剧电影院
-https://live.ottiptv.cc/huya/31002899
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1054/39/83a56a82c04461f15d918dc055d0b4_180_135.jpg?1620961449" group-title="影视直播", 酱婶儿电影
+https://live.ottiptv.cc/huya/24396474
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1030/d5/8e38e286a378c453f8264d52dc96da_180_135.jpg?1718172484" group-title="影视直播", 青年电影馆
 https://live.ottiptv.cc/huya/21388479
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1024/c1/52e00a9af86d06d2a2a467f551ab6d_180_135.jpg?1649439695" group-title="影视直播", 大聪明和魏乐乐影院
-https://live.ottiptv.cc/huya/23304691
+#EXTINF:-1 tvg-logo="https://diy-assets.msstatic.com/cqhfolder/NewDefault.png" group-title="影视直播", 短剧电影院
+https://live.ottiptv.cc/huya/31002899
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1044/ef/ae5c4c6daaabd1489e7cffe1e2c4b9_180_135.jpg?1732776437" group-title="影视直播", 百年影视馆
 https://live.ottiptv.cc/huya/30399989
 #EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1016/ea/031bc591d09ce78653bbed4ee79fcc_180_135.jpg?1604504340" group-title="影视直播", 电影旅者
