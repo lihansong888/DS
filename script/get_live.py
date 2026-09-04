@@ -24,10 +24,27 @@ SATELLITE_KEYWORDS = [
     "福建卫视","东南卫视","江西卫视","广西卫视","云南卫视",
     "贵州卫视","陕西卫视","甘肃卫视","宁夏卫视","新疆卫视"
 ]
-# =========【新增：影视直播关键词，可自行增删】==========
 MOVIE_KEYWORDS = [
     "电影","影院","影视","热播电影","经典电影",
     "动作电影","喜剧电影","院线","4K电影"
+]
+# =========【新增：音乐台，严格使用截图里全部名称，不额外增加】==========
+MUSIC_KEYWORDS = [
+    "怀集音乐台",
+    "音乐石榴",
+    "秋月剪水",
+    "喵喵音乐台",
+    "阿七点歌台",
+    "音乐喵",
+    "下饭音乐",
+    "音乐台长",
+    "音乐WU歌",
+    "音乐快斗",
+    "音乐猛抬头",
+    "黑糖音乐秀",
+    "最久音乐",
+    "荒草音乐",
+    "蚕豆电台"
 ]
 
 def parse_any(text: str):
@@ -77,9 +94,11 @@ def main():
                     group = "央视频道"
                 elif any(k in ch_name for k in SATELLITE_KEYWORDS):
                     group = "卫视频道"
-                # =========【新增判断影视直播分类】==========
                 elif any(k in ch_name for k in MOVIE_KEYWORDS):
                     group = "影视直播"
+                # =========新增音乐分类判断==========
+                elif any(k in ch_name for k in MUSIC_KEYWORDS):
+                    group = "音乐频道"
 
                 if group is not None:
                     item_key = (extinf, play_url)
