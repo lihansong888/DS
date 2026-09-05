@@ -1,5 +1,7 @@
 import requests
 import re
+import os
+
 # ========== 只在这里填写你自己要用的直播源，其余全部删掉 ==========
 URL_LIST = [
     "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
@@ -71,7 +73,7 @@ ORIGINAL_KEYWORDS = [
     "齐鲁影视",
     "沫宝儿吖",
     "渐渐不想长大"
-    
+
 ]
 def parse_any(text: str):
     res = []
@@ -135,13 +137,31 @@ def main():
         except Exception as e:
             print(f"⚠️ 拉取 {url} 失败：{e}")
     print(f"✅筛选结束，一共保留频道：{len(keep_list)}")
-    output = ["#EXTM3U"]
+
+    out_dir = "./output"
+    os.makedirs(out_dir, exist_ok=True)
+
+    # 输出 output/live.m3u
+    output_m3u = ["#EXTM3U"]
     for ext, u in keep_list:
-        output.append(ext)
-        output.append(u)
-    final_text = "\n".join(output)
-    with open("live.m3u", "w", encoding="utf-8") as f:
-        f.write(final_text)
-    print("✅已输出 live.m3u")
+        output_m3u.append(ext)
+        output_m3u.append(u)
+    m3u_text = "\n".join(output_m3u)
+    m3u_path = os.path.join(out_dir, "live.m3u")
+    with open(m3u_path, "w", encoding="utf-8") as f:
+        f.write(m3u_text)
+    print(f"✅已输出 m3u：{m3u_path}")
+
+    # 输出 output/live.txt
+    txt_lines = []
+    for ext, u in keep_list:
+        cname = get_channel_name(ext)
+        txt_lines.append(f"{cname},{u}")
+    txt_content = "\n".join(txt_lines)
+    txt_path = os.path.join(out_dir, "live.txt")
+    with open(txt_path, "w", encoding="utf-8") as f:
+        f.write(txt_content)
+    print(f"✅已输出 txt：{txt_path}")
+
 if __name__ == "__main__":
     main()
