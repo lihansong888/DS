@@ -59,7 +59,7 @@ def main():
                 item_key = (ch_name, play_url)
                 if item_key not in seen:
                     seen.add(item_key)
-                    group_bucket["一起看"].append((ch_name, play_url))
+                    group_bucket["影视一起看"].append((ch_name, play_url))
         except Exception as e:
             print(f"⚠️ 拉取 {url} 失败：{e}")
     total_cnt = sum(len(v) for v in group_bucket.values())
