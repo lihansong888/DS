@@ -6,6 +6,12 @@ URL_LIST = [
     "https://gh-proxy.com/https://github.com/mursor1985/LIVE/blob/main/huyayqk.m3u"
 ]
 
+# ========== 要屏蔽的频道（不读取、不录入）==========
+EXCLUDE_CHANNELS = [
+    "4K60PSDR-H264-AAC测试",
+    "4K60PHLG-HEVC-EAC3测试"
+]
+
 def parse_any(text: str):
     res = []
     extinf_line = None
@@ -46,6 +52,9 @@ def main():
             channels = parse_any(resp.text)
             for extinf, play_url in channels:
                 ch_name = get_channel_name(extinf)
+                # 屏蔽指定频道
+                if ch_name in EXCLUDE_CHANNELS:
+                    continue
                 # 所有频道直接放进一起看，不做关键词筛选
                 item_key = (ch_name, play_url)
                 if item_key not in seen:
@@ -55,7 +64,6 @@ def main():
             print(f"⚠️ 拉取 {url} 失败：{e}")
     total_cnt = sum(len(v) for v in group_bucket.values())
     print(f"✅筛选结束，一共保留频道：{total_cnt}")
-
     # 输出到脚本所在目录（即 watchtv-one 文件夹）
     out_dir = os.path.dirname(os.path.abspath(__file__))
     output_m3u = ["#EXTM3U"]
@@ -71,3 +79,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
