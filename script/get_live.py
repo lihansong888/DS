@@ -1,7 +1,6 @@
 import requests
 import re
 import os
-
 # ========== 只在这里填写你自己要用的直播源，其余全部删掉 ==========
 URL_LIST = [
     "https://raw.githubusercontent.com/Supprise0901/TVBox_live/refs/heads/main/live.txt",
@@ -31,7 +30,6 @@ MOVIE_KEYWORDS = [
     "电影","影院","影视","热播电影","经典电影",
     "动作电影","喜剧电影","院线","4K电影"
 ]
-# =========【新增：音乐台，严格使用截图里全部名称，不额外增加】==========
 MUSIC_KEYWORDS = [
     "怀集音乐台",
     "音乐石榴",
@@ -49,7 +47,6 @@ MUSIC_KEYWORDS = [
     "荒草音乐",
     "蚕豆电台"
 ]
-# =========新增原创关键词==========
 ORIGINAL_KEYWORDS = [
     "武林萌主唐小姐",
     "温柔璐琳",
@@ -73,8 +70,8 @@ ORIGINAL_KEYWORDS = [
     "齐鲁影视",
     "沫宝儿吖",
     "渐渐不想长大"
-
 ]
+
 def parse_any(text: str):
     res = []
     extinf_line = None
@@ -96,20 +93,30 @@ def parse_any(text: str):
             fake_ext = f'#EXTINF:-1,{name_part}'
             res.append((fake_ext, url_part))
     return res
+
 def get_channel_name(extinf):
     if "," in extinf:
         return extinf.split(",")[-1].strip()
     return ""
+
 def add_group_tag(extinf: str, group_name:str):
-    # 清除所有原有的 group-title
     extinf = re.sub(r' group-title="[^"]+"', '', extinf)
     idx = extinf.rfind(',')
     if idx == -1:
         return extinf
     return extinf[:idx] + f' group-title="{group_name}"' + extinf[idx:]
+
 def main():
-    keep_list = []
+    # 按分组存储 {分组名: [(频道名,url),...]}
+    group_bucket = {
+        "央视频道": [],
+        "卫视频道": [],
+        "影视直播": [],
+        "音乐频道": [],
+        "原创": []
+    }
     seen = set()
+
     for url in URL_LIST:
         try:
             resp = requests.get(url, timeout=15)
@@ -128,40 +135,45 @@ def main():
                     group = "音乐频道"
                 elif any(k in ch_name for k in ORIGINAL_KEYWORDS):
                     group = "原创"
+
                 if group is not None:
-                    item_key = (extinf, play_url)
+                    item_key = (ch_name, play_url)
                     if item_key not in seen:
                         seen.add(item_key)
-                        new_ext = add_group_tag(extinf, group)
-                        keep_list.append((new_ext, play_url))
+                        group_bucket[group].append((ch_name, play_url))
         except Exception as e:
             print(f"⚠️ 拉取 {url} 失败：{e}")
-    print(f"✅筛选结束，一共保留频道：{len(keep_list)}")
+
+    total_cnt = sum(len(v) for v in group_bucket.values())
+    print(f"✅筛选结束，一共保留频道：{total_cnt}")
 
     out_dir = "./output"
     os.makedirs(out_dir, exist_ok=True)
 
-    # 输出 output/live.m3u
+    # =========输出 m3u（保留group‑title）=========
     output_m3u = ["#EXTM3U"]
-    for ext, u in keep_list:
-        output_m3u.append(ext)
-        output_m3u.append(u)
-    m3u_text = "\n".join(output_m3u)
+    for gname, ch_list in group_bucket.items():
+        for cname, curl in ch_list:
+            fake_ext = f'#EXTINF:-1 group-title="{gname}",{cname}'
+            output_m3u.append(fake_ext)
+            output_m3u.append(curl)
     m3u_path = os.path.join(out_dir, "live.m3u")
     with open(m3u_path, "w", encoding="utf-8") as f:
-        f.write(m3u_text)
+        f.write("\n".join(output_m3u))
     print(f"✅已输出 m3u：{m3u_path}")
 
-    # 输出 output/live.txt
+    # =========输出 TVBox 专用 #genre# 格式txt（就是截图里面那种）=========
     txt_lines = []
-    for ext, u in keep_list:
-        cname = get_channel_name(ext)
-        txt_lines.append(f"{cname},{u}")
-    txt_content = "\n".join(txt_lines)
+    for gname, ch_list in group_bucket.items():
+        if len(ch_list) == 0:
+            continue
+        txt_lines.append(f"{gname},#genre#")
+        for cname, curl in ch_list:
+            txt_lines.append(f"{cname},{curl}")
     txt_path = os.path.join(out_dir, "live.txt")
     with open(txt_path, "w", encoding="utf-8") as f:
-        f.write(txt_content)
-    print(f"✅已输出 txt：{txt_path}")
+        f.write("\n".join(txt_lines))
+    print(f"✅已输出带#genre#分组txt：{txt_path}")
 
 if __name__ == "__main__":
     main()
