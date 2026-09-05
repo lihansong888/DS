@@ -3,7 +3,7 @@ import re
 import os
 # ========== 只在这里填写你自己要用的直播源，其余全部删掉 ==========
 URL_LIST = [
-    "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u"
+    "https://gh-proxy.com/https://github.com/mursor1985/LIVE/blob/main/huyayqk.m3u"
 ]
 
 def parse_any(text: str):
