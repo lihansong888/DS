@@ -1,10 +1,6 @@
 #EXTM3U
 #EXTINF:-1 group-title="一起看",2026-09-05 22:18:05
 https://cdn.jsdelivr.net/gh/feiyang666999/testvideo/time/time.mp4
-#EXTINF:-1 group-title="一起看",4K60PSDR-H264-AAC测试
-https://cdn.jsdelivr.net/gh/feiyang666999/testvideo/sdr4kvideo/playlist.m3u8
-#EXTINF:-1 group-title="一起看",4K60PHLG-HEVC-EAC3测试
-https://cdn.jsdelivr.net/gh/feiyang666999/testvideo/hlg4kvideo/playlist.m3u8
 #EXTINF:-1 group-title="一起看",周星星
 https://live.ottiptv.cc/huya/11342412
 #EXTINF:-1 group-title="一起看",新橙記Orange丶
