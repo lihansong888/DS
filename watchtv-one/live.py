@@ -42,7 +42,7 @@ def get_channel_name(extinf):
 def main():
     # 只有一个分组：一起看
     group_bucket = {
-        "一起看": []
+        "影视一起看": []
     }
     seen = set()
     for url in URL_LIST:
