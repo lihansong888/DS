@@ -1,4 +1,4 @@
-河南卫视,http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=8d5309affa50dd9036b4ebabb51af81e&wsTime=1788588198
+河南卫视,http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=2d190fc7012e50bbb9f7241c64f0fd49&wsTime=1788591822
 CCTV-1,http://221.7.175.154:8445/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV-2,http://221.7.175.154:8445/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV-2,http://173.208.212.130:8181/720p/cctv2.m3u8
