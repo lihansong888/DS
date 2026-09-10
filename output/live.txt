@@ -1020,8 +1020,8 @@ CCTV2,http://125.42.148.178:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&a
 CCTV4,http://125.42.148.178:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV4欧洲,http://t.061899.xyz/tl/tl.php?id=cctv4o
 CCTV4美洲,http://t.061899.xyz/tl/tl.php?id=cctv4m
-CCTV-4 中文国际,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1789117200-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-868b950a444e7d5c22c81e37806d487f&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
-CCTV-4K 高清,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1789117200-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-f2c06a24c344d1c82379675d9cba4c6d&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
+CCTV-4 中文国际,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1789128000-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-5f2c9859d83d2af429260f25a5fd74f7&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
+CCTV-4K 高清,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1789128000-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-d8fd6710e9d194928ab3a44392c50c47&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
 CCTV5,http://gmxw.7766.org:808/hls/93/index.m3u8
 CCTV5+,http://t.061899.xyz/tl/tl.php?id=cctv5p
 CCTV6,http://t.061899.xyz/tl/tl.php?id=cctv6
@@ -1029,9 +1029,10 @@ CCTV-6电影,http://8.138.7.223/tv/1905.php?id=LIVE3YPYZ30E7V1R0
 CCTV7,http://t.061899.xyz/tl/tl.php?id=cctv7
 CCTV8,http://gmxw.7766.org:808/hls/96/index.m3u8
 CCTV9,http://74.91.26.218:82/live/cctv9hd.m3u8
-CCTV-9 纪录,https://v4-702cae17a28d6e4f0c0002bba021d934.livehwc4.com/play.kankanlive.com/live/1698423397390920.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=4332830da83ca2a289d0cde024621b72
+CCTV-9 纪录,https://v4-702cae17a28d6e4f0c0002bba021d934.livehwc4.com/play.kankanlive.com/live/1698423397390920.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=546e8b0d6648a4a07eb1541894e43453
 CCTV10,http://t.061899.xyz/tl/tl.php?id=cctv10
 CCTV11,http://t.061899.xyz/tl/tl.php?id=cctv11
+CCTV12,http://t.061899.xyz/tl/tl.php?id=cctv12
 CCTV13,http://t.061899.xyz/tl/tl.php?id=cctv13
 CCTV14,http://125.42.148.178:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV15,http://125.42.148.178:9901/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2510,18 +2511,24 @@ CCTV17,http://t.061899.xyz/tl/tl.php?id=cctv17
 深圳卫视4K,http://nn.7x9d.cn/深圳最新.php?id=szws4k
 深圳卫视4K,http://101.35.240.114:88/live.php?id=深圳卫视4K
 广东卫视4K,http://101.35.240.114:88/live.php?id=广东卫视4K
+东南卫视,http://t.061899.xyz/tl/tl.php?id=dnws
+东方卫视,http://t.061899.xyz/tl/tl.php?id=dfws
 云南卫视,http://t.061899.xyz/tl/tl.php?id=ynws
+吉林卫视,http://t.061899.xyz/tl/tl.php?id=jlws
 山东卫视,http://t.061899.xyz/tl/tl.php?id=sdws
 广西卫视,http://t.061899.xyz/tl/tl.php?id=gxws
+新疆卫视,http://t.061899.xyz/tl/tl.php?id=xjws
+江西卫视,http://t.061899.xyz/tl/tl.php?id=jxws
 湖北卫视,http://t.061899.xyz/tl/tl.php?id=hubws
+甘肃卫视,http://t.061899.xyz/tl/tl.php?id=gsws
 贵州卫视,http://t.061899.xyz/tl/tl.php?id=gzws
+辽宁卫视,http://t.061899.xyz/tl/tl.php?id=lnws
 重庆卫视,http://t.061899.xyz/tl/tl.php?id=cqws
 北京卫视,http://125.42.148.178:9901/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0
 四川卫视,https://live.264788.xyz/channel/sichuanweishi4k?streamid=401bf692a1a8b91298f26077d53316d6&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
 天津卫视,http://222.169.85.8:9901/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
 宁夏卫视,http://120.76.248.139/live/bfgd/4200000118.m3u8
 安徽卫视,http://gmxw.7766.org:808/hls/40/index.m3u8
-新疆卫视,http://218.84.12.186:8001/hls/main/playlist.m3u8?zxinjd;http://218.84.12.186:8001/hls/main/playlist.m3u8zxinjd
 江苏卫视,http://125.42.148.178:9901/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
 江苏卫视4K,http://8.138.7.223/tv/jsws4k.php
 河北卫视,http://120.76.248.139/live/bfgd/4200000108.m3u8
@@ -2529,8 +2536,6 @@ CCTV17,http://t.061899.xyz/tl/tl.php?id=cctv17
 浙江卫视,https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 深圳卫视,http://gmxw.7766.org:808/hls/45/index.m3u8
 湖南卫视,https://txmov2.a.kwimgs.com/bs3/video-hls/5199687338554291078_hlsb.m3u8
-甘肃卫视,http://218.13.170.98:9901/tsfile/live/0141_1.m3u8
-辽宁卫视,http://61.136.172.236:9901/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0
 陕西卫视,https://live.264788.xyz/channel/shaanxiweishi?streamid=9dc887dba8ecb4e4143baf4f2373800c&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
 影视直播,#genre#
 CHC家庭影院,http://198.204.228.26/live/chcjt.m3u8
